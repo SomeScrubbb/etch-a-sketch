@@ -1,2 +1,2 @@
 # etch-a-sketch
-etch-a-sketch using HTML, CSS, and JavaScript
+Etch-a-sketch project using HTML, CSS, and JavaScript. User will be able to draw using the sketchpad. 

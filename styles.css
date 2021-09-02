@@ -1,0 +1,21 @@
+#grid-container {
+    display: grid;
+    height: 205px;
+    width: 205px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+
+}
+
+.color {
+    background-color: wheat !important;
+}
+
+
+.grid-element {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(240, 100, 100);
+    border-width: 1px;
+    border-style: solid;
+}
