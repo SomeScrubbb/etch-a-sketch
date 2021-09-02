@@ -30,9 +30,20 @@ console.log(divList.length);
 document.getElementById("div1").addEventListener("click", () => console.log('hi'))
 
 //for each element in divList
-for (let i; i < divList.length; i++) {
-    document.getElementById(`${divList[i]}`).addEventListener("click", () => console.log('hi'))
-}
+divList.forEach(item => {
+    let id = item.id;
+    item.addEventListener('mouseover', (e) => {
+        console.log(e);
+        item.classList.toggle('color');
+    });
+})
+
+
+/*for (let i = 0; i < divList.length; i++) {
+    let currentDiv = divList[i];
+    console.log(currentDiv);
+    document.querySelector(currentDiv).addEventListener("click", () => console.log('hi'));
+}*/
 
 
     //create a variable called divID and set it to `div${it's index#}`
