@@ -19,7 +19,19 @@ divList.forEach(item => {
         console.log(e);
         item.classList.add('color');
     });
-}) 
+});
 
 //if you want to make an eraser, do the same thing but with remove
+
+
 //if you want clear, select all and remove the color class
+
+let clear = document.querySelector('#clear-button');
+
+//create event listener for clear. set it to onclick 
+clear.addEventListener('click', (e) => {
+    //for each item in divList, remove the color class
+    divList.forEach(item => {
+        item.classList.remove('color');
+    });
+});
