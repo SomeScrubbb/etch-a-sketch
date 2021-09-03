@@ -16,7 +16,6 @@ divList = document.querySelectorAll('.grid-element');
 divList.forEach(item => {
     let id = item.id;
     item.addEventListener('mouseover', (e) => {
-        console.log(e);
         item.classList.add('color');
     });
 });
@@ -26,12 +25,25 @@ divList.forEach(item => {
 
 //if you want clear, select all and remove the color class
 
-let clear = document.querySelector('#clear-button');
+let clearButton = document.querySelector('#clear-button');
 
 //create event listener for clear. set it to onclick 
-clear.addEventListener('click', (e) => {
+clearButton.addEventListener('click', (e) => {
     //for each item in divList, remove the color class
     divList.forEach(item => {
         item.classList.remove('color');
     });
+    //prompt the user for a new # of squares
+    let newGride = prompt('What dimensions of the new sketchbox do you want?')
 });
+
+//create slider for grid size
+
+let slider = document.getElementById("grid-size-slider");
+let output = document.getElementById("demo");
+output.textContent = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.textContent = this.value;
+}
