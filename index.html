@@ -7,14 +7,21 @@
     </head>
 
     <body>
-        <div id="button-wrappers">
-            <div class="slide-container">
-                <input type="range" min="1" max="64" value="16" class="slider" id="grid-size-slider">
-                <p id="demo"></p>
+        <main>
+            <div id="button-wrappers">
+                <div class="slide-container">
+                    <input type="range" min="1" max="64" value="16" class="slider" id="grid-size-slider">
+                    <p id="demo"></p>
+                </div>
+                <button type="button" id="border-toggle" class="button">Toggle Borders</button>
+                <button type ="reset" id="eraser" class="button">Eraser</button>
+                <button type ="button" id="clear-button" class="button">Clear</button>
             </div>
-            <button type ="reset" id="eraser" class="button">Eraser</button>
-            <button type ="reset" id="clear-button" class="button">Clear</button>
-        </div>
-        <div id="grid-container"></div>
+            <div>
+                <h1>Etch-a-sketch</h1>
+                <div id="grid-container"></div>
+            </div>
+        </main>
+
     </body>
 </html>

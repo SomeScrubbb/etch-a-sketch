@@ -12,11 +12,10 @@ for (let i = 1; i <= 256; i++) {
 
 divList = document.querySelectorAll('.grid-element');
 
-//colors in the selected grid
+//colors in the selected grida
 function enableShading() {
     divList = document.querySelectorAll('.grid-element');
     divList.forEach(item => {
-        let id = item.id;
         item.addEventListener('mouseover', (e) => {
             item.classList.add('color');
         });
@@ -26,19 +25,38 @@ function enableShading() {
 enableShading();
 
 //if you want to make an eraser, do the same thing but with remove
+let erase = document.querySelector('#eraser');
 
+function removeShading() {
+    divList = document.querySelectorAll('.grid-element');
+    divList.forEach(item => {
+        item.removeEventListener('mouseover', (e) => {
+            item.classList.add('color');
+        });
+    });
+}
+
+
+let borderToggle = document.querySelector('#border-toggle');
+
+borderToggle.addEventListener('click', (e) => {
+    divList.forEach(item => {
+        item.classList.toggle('borders');
+    });
+});
 
 //create slider for grid size
 
 let slider = document.getElementById("grid-size-slider");
 let output = document.getElementById("demo");
-output.textContent = slider.value; // Display the default slider value
+output.textContent = `${slider.value} x ${slider.value}` ; // Display the default slider value
 
 // Update the current slider value (each time you drag the slider handle)
 let gridDimensions;
 let newSquareCount = 256;
+
 slider.oninput = function() {
-    output.textContent = this.value;
+    output.textContent = `${this.value} x ${this.value}` ; 
     //set gridDimensions to the slider value
     gridDimensions = this.value;
     newSquareCount = Math.pow(gridDimensions, 2);

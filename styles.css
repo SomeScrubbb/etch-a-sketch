@@ -1,22 +1,46 @@
 #grid-container {
     display: grid;
-    height: 800px;
-    width: 800px;
+    height: 60vh;
+    width: 60vh;
     grid-template-columns: repeat(16, 1fr);
     grid-template-rows: repeat(16, 1fr);
-
+    box-shadow: 6px 6px 10px rgb(196, 196, 196);
 }
 
 body {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #ededed;
+}
+
+main {
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    justify-items: center;
+}
+
+#button-wrappers {
+    margin-right: 10vh;
+    padding: 4vh;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 5px 5px 10px rgb(196, 196, 196);
 }
 
 .slide-container {
     width: 100%;
 }
+
+h1 {
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    font-size: 3em;
+} 
 
 p {
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -64,8 +88,8 @@ p {
     border: none;
     border-radius: 6px;
     color: white;
-    background-color: black;
-    padding: 25px 50px;
+    background-color: #333;
+    padding: 15px 35px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -76,7 +100,7 @@ p {
   }
 
 .color {
-    background-color: wheat !important;
+    background-color: rgb(48, 119, 101) !important;
 }
 
 #button-wrappers {
@@ -88,7 +112,10 @@ p {
 
 
 .grid-element {
-    background-color: rgb(240, 100, 100);
-    border-width: 1px;
+    background-color: rgb(255, 255, 255);
+}
+
+.borders {
+    border-width: 0.1px;
     border-style: solid;
 }
