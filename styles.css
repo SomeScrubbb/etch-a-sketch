@@ -88,8 +88,6 @@ p {
 
 
 .grid-element {
-    height: 1fr;
-    width: 1fr;
     background-color: rgb(240, 100, 100);
     border-width: 1px;
     border-style: solid;

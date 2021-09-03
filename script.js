@@ -67,7 +67,7 @@ clearButton.addEventListener('click', (e) => {
 
 
 function removeSquares() {
-    let toRemove = 256 - newSquareCount
+    let toRemove = currentSquareCount - newSquareCount
     //while toRemove > 0
     while (toRemove > 0) {
             //remove the lastChild of the grid container
@@ -84,9 +84,9 @@ function addSquares() {
     //create a variable that tracks the number of squares to add
     //this variable is equal to the specified dimensions minus the original dimensions
     let toAdd = newSquareCount - currentSquareCount;
+    let i = currentSquareCount + 1;
     while (toAdd > 0) {
         //create a variable called i which is used as the index number for the id atribute
-        let i = 266;
         const newDivs = document.createElement('div');
         newDivs.classList.add('grid-element');
         //set an id to div and the current index number
